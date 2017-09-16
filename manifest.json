@@ -22,9 +22,6 @@
     "default_title": "histree",
     "default_popup": "src/browser_action/browser_action.html"
   },
-  "chrome_url_overrides": {
-    "history": "src/override/override.html"
-  },
   "permissions": [
     "history",
     "tabs"
