@@ -1,0 +1,27 @@
+{
+  "name": "histree",
+  "version": "1.0.0",
+  "description": "Visualize your chrome tab history as a tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "zip -r -X build.zip ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliotaplant/histree.git"
+  },
+  "keywords": [
+    "histree",
+    "tree",
+    "history",
+    "chrome",
+    "extension"
+  ],
+  "author": "elliotaplant@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elliotaplant/histree/issues"
+  },
+  "homepage": "https://github.com/elliotaplant/histree#readme"
+}
