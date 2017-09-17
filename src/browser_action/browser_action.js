@@ -43,7 +43,6 @@ getActiveTab(activeTab => {
       tab: activeTab
     },
     function(response) {
-      console.log('response', response);
       log(response.root);
       root = response.root;
       root.x0 = height / 2;
