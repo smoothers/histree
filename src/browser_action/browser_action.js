@@ -204,7 +204,7 @@ function update(source) {
 function click(d) {
   if (d.url.includes('http')) {
     tellTabToNavigateTo(d.url);
-
+    closePopUp();
   } else if (d.children) {
     d._children = d.children;
     d.children = null;
@@ -222,4 +222,8 @@ function tellTabToNavigateTo(url) {
   getActiveTab(tab => {
     chrome.tabs.update(tab.id, { url });
   });
+}
+
+function closePopUp() {
+  window.close();
 }
