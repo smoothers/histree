@@ -3,5 +3,5 @@ var message = {
 	referrer: document.referrer,
 }
 chrome.extension.sendMessage(message, function(response) {
-	response('yo', response)
+	// response('yo', response)
 });
