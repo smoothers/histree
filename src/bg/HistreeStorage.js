@@ -41,8 +41,7 @@ class HistreeStorage {
 
       // Recalc width and depth of tree
       this.rootsDict[tabId].depth = depthOf(this.rootsDict[tabId].root, 0);
-      // this.rootsDict[tabId].width = widthOf(this.rootsDict[tabId].root, 0);
-      console.log('width', this.rootsDict[tabId].width);
+      this.rootsDict[tabId].width = widthOf(this.rootsDict[tabId].root, 0);
     }
   }
 

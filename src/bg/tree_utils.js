@@ -19,7 +19,7 @@ function treeHasVisited(r, n){
 
 function depthOf(r, d){
 	d++;
-	if (isChild(r)){
+	if (isLeaf(r)){
 		return d;
 	}
 	else{
@@ -28,11 +28,18 @@ function depthOf(r, d){
 	}
 };
 
-// function widthOf(r){
+function widthOf(r, w){
+	if (isLeaf(r)){
+		return 1;
+	}
+	else{
+		current_width = w;
+		r.children.forEach(function(c){ w += widthOf(c, current_width); })
+	}
+	return w;
+};
 
-// };
-
-function isChild(r){
+function isLeaf(r){
 	return (r.children.length === 0);
 }
 
