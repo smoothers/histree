@@ -11,6 +11,7 @@
   },
   "background": {
     "scripts": [
+      "src/bg/tree_utils.js",
       "src/bg/background.js"
     ],
     "persistent": true
