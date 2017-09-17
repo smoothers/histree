@@ -1,18 +1,15 @@
 var roots_dict = {};
 
 // This handles messages sent from inject.js or browser_action.js
-chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
-
+chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
   // Handles reuqests from browser_action.js
   if (request.from === 'browser_action') {
     if (request.action === 'navigate') {
-      sendActiveTabToUrl(request.url);
+      return sendActiveTabToUrl(request.url);
     } else if (request.action === 'get-tree') {
-      getActiveTab(function(activeTab) {
-        sendResponse(roots_dict[activeTab.id]);
-      });
+      sendResponse(roots_dict[request.tab.id]);
     } else {
-      sendResponse('No action in request');
+      return sendResponse('No action in request');
     }
   } else if (request.from === 'inject') {
     sendResponse('Sounds good :)')
@@ -46,16 +43,23 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
   }
 });
 
-function getActiveTab(callback) {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+const getActiveTab = (callback) => {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, (tabs) => {
     callback(tabs[0]);
   });
 }
 
-function sendActiveTabToUrl(url) {
-  getActiveTab(function(tab) { chrome.tabs.update(tab.id, { url: url }); });
+const sendActiveTabToUrl = (url) => {
+  getActiveTab((tab) => {
+    chrome.tabs.update(tab.id, {
+      url: url
+    });
+  });
 }
 
 chrome.history.onVisited.addListener(
-  function(result) {}
+  (result) => {}
 );
