@@ -3,7 +3,9 @@ chrome.extension.sendMessage({ from: 'inject' }, function(response) {
 	if (document.readyState === 'complete') {
 		clearInterval(readyStateCheckInterval);
 
-		chrome.runtime.sendMessage({'message': 'page_loaded'});
+		chrome.runtime.sendMessage({
+			'from': 'inject',
+			'message': 'page_loaded'});
 
 	}
 	}, 10);
