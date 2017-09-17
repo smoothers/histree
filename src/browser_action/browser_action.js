@@ -30,15 +30,7 @@ getActiveTab(activeTab => {
       root.x0 = height / 2;
       root.y0 = 0;
 
-      // Uncomment this to add ability to collapse items
-      // function collapse(d) {
-      //   if (d.children) {
-      //     d._children = d.children;
-      //     d._children.forEach(collapse);
-      //     d.children = null;
-      //   }
-      // }
-      //
+      // Uncomment this to collapse top level items
       // root.children.forEach(collapse);
       update(root);
     });
@@ -74,6 +66,14 @@ var svg = d3.select("body")
 
 d3.select(self.frameElement)
   .style("height", "800px");
+
+function collapse(d) {
+  if (d.children) {
+    d._children = d.children;
+    d._children.forEach(collapse);
+    d.children = null;
+  }
+}
 
 function update(source) {
   // Compute the new tree layout.
