@@ -1,1 +1,12 @@
-console.log('Hi kurek');
+// We don't know what context this runs in, but it seems like we don't have access to the console
+// Instead of using console.log in this file, use this method to append messages to the popup
+function log(message) {
+  var messageLi = document.createElement('li')
+  messageLi.textContent = JSON.stringify(message);
+  document.getElementById('log').append(messageLi);
+}
+
+chrome.extension.sendMessage({}, function(response) {
+  // Log the response
+  log(response);
+});
