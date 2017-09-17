@@ -1,12 +1,7 @@
-chrome.extension.sendMessage({ from: 'inject' }, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === 'complete') {
-		clearInterval(readyStateCheckInterval);
-
-		chrome.runtime.sendMessage({
-			'from': 'inject',
-			'message': 'page_loaded'});
-
-	}
-	}, 10);
+var message = {
+	from: 'inject',
+	referrer: document.referrer,
+}
+chrome.extension.sendMessage(message, function(response) {
+	response('yo', response)
 });
