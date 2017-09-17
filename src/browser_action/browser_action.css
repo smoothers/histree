@@ -21,3 +21,8 @@
 .rect-shift {
   transform: translate(-50%, -50%);
 }
+
+body {
+  min-width: 100px;
+  min-height: 100px;
+}

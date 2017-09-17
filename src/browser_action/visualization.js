@@ -6,6 +6,7 @@
 
 class HistreeVisualization {
   constructor(depth, leaves) {
+    console.log('constructing with depth', depth);
     this.margin = {
       top: 20,
       right: 60,
@@ -33,11 +34,22 @@ class HistreeVisualization {
       .append("g")
       .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
+    console.log('self', self);
     d3.select(self.frameElement)
-      .style("this.height", "500px");
+      .style("height", "500px");
   }
 
   update(source) {
+    // if (!this.svg) {
+    //   this.svg = d3.select("body")
+    //     .append("svg")
+    //     .attr("width", this.width + this.margin.right + this.margin.left)
+    //     .attr("height", this.height + this.margin.top + this.margin.bottom)
+    //     .append("g")
+    //     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
+    // }
+
+    console.log('updating with source');
     // Compute the new tree layout.
     var nodes = this.tree.nodes(this.root)
       .reverse();
