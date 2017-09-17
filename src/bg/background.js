@@ -7,6 +7,7 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === 'navigate') {
       return sendActiveTabToUrl(request.url);
     } else if (request.action === 'get-tree') {
+      console.log('sending', roots_dict[request.tab.id]);
       sendResponse(roots_dict[request.tab.id]);
     } else {
       return sendResponse('No action in request');
