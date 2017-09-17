@@ -8,9 +8,9 @@ class HistreeVisualization {
   constructor(depth, leaves) {
     this.margin = {
       top: 20,
-      right: 60,
+      right: 80,
       bottom: 20,
-      left: 60
+      left: 80
     }
     // Height and width of popup window
     this.width = depth * 140 - this.margin.right - this.margin.left;
