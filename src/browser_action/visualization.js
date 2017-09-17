@@ -34,7 +34,6 @@ class HistreeVisualization {
       .append("g")
       .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
-    console.log('self', self);
     d3.select(self.frameElement)
       .style("height", "500px");
   }
