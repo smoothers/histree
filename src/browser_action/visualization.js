@@ -21,9 +21,7 @@ var tree = d3.layout.tree()
   .size([height, width]);
 
 var diagonal = d3.svg.diagonal()
-  .projection(function(d) {
-    return [d.y, d.x];
-  });
+  .projection(d => [d.y, d.x]);
 
 var svg = d3.select("body")
   .append("svg")
@@ -45,20 +43,18 @@ function collapse(d) {
 
 function update(source) {
   // Compute the new tree layout.
-  var nodes = tree.nodes(root)
-    .reverse(),
-    links = tree.links(nodes);
+  var nodes = tree.nodes(root).reverse();
+  var links = tree.links(nodes);
 
   // Normalize for fixed-depth.
   nodes.forEach(function(d) {
-    d.y = d.depth * 180;
+    d.y = d.depth * 100;
   });
 
   // Update the nodes…
   var node = svg.selectAll("g.node")
-    .data(nodes, function(d) {
-      return d.id || (d.id = ++i);
-    });
+    // Make sure all nodes have id's
+    .data(nodes, d => d.id || (d.id = ++i))
 
   // Enter any new nodes at the parent's previous position.
   var nodeEnter = node.enter()
