@@ -30,12 +30,97 @@ const exampleData = {
         {
           url: 'http://www.ixce.cods/mar/pars',
           title: 'Ice DOgs 12098 12980 1928 ',
-          children: []
+          children: [
+            {
+              url: 'http://www.ixce.cods/mar/pars',
+              title: 'Ice DOgs 12098 12980 1928 ',
+              children: [
+                {
+                  url: 'http://www.ixce.cods/mar/pars',
+                  title: 'Ice DOgs 12098 12980 1928 ',
+                  children: [
+                    {
+                      url: 'http://www.ixce.cods/mar/pars',
+                      title: 'Ice DOgs 12098 12980 1928 ',
+                      children: [
+                        {
+                          url: 'http://www.ixce.cods/mar/pars',
+                          title: 'Ice DOgs 12098 12980 1928 ',
+                          children: []
+                        },
+                        {
+                          url: 'http://www.ixce.cods/mar/pars',
+                          title: 'Ice DOgs 12098 12980 1928 ',
+                          children: []
+                        },
+                      ]
+                    },
+                  ]
+                },
+                {
+                  url: 'http://www.ixce.cods/mar/pars',
+                  title: 'Ice DOgs 12098 12980 1928 ',
+                  children: []
+                },
+              ]
+            },
+          ]
         },
         {
           url: 'http://www.ixce.cods/mar/pars',
           title: 'Ice DOgs 12098 12980 1928 ',
-          children: []
+          children: [
+            {
+              url: 'http://www.ixce.cods/mar/pars',
+              title: 'Ice DOgs 12098 12980 1928 ',
+              children: [
+                {
+                  url: 'http://www.ixce.cods/mar/pars',
+                  title: 'Ice DOgs 12098 12980 1928 ',
+                  children: []
+                },
+                {
+                  url: 'http://www.ixce.cods/mar/pars',
+                  title: 'Ice DOgs 12098 12980 1928 ',
+                  children: [
+                    {
+                      url: 'http://www.ixce.cods/mar/pars',
+                      title: 'Ice DOgs 12098 12980 1928 ',
+                      children: [
+                        {
+                          url: 'http://www.ixce.cods/mar/pars',
+                          title: 'Ice DOgs 12098 12980 1928 ',
+                          children: []
+                        },
+                        {
+                          url: 'http://www.ixce.cods/mar/pars',
+                          title: 'Ice DOgs 12098 12980 1928 ',
+                          children: [
+                            {
+                              url: 'http://www.ixce.cods/mar/pars',
+                              title: 'Ice DOgs 12098 12980 1928 ',
+                              children: [
+                                {
+                                  url: 'http://www.ixce.cods/mar/pars',
+                                  title: 'Ice DOgs 12098 12980 1928 ',
+                                  children: []
+                                },
+                                {
+                                  url: 'http://www.ixce.cods/mar/pars',
+                                  title: 'Ice DOgs 12098 12980 1928 ',
+                                  children: []
+                                },
+                              ]
+                            },
+                          ]
+                        },
+                      ]
+                    },
+                  ]
+                },
+              ]
+            },
+          ]
         },
       ]
     },
@@ -66,6 +151,6 @@ const exampleData = {
 // });
 
 // Set up the canvas, given the depth and leaves of the tree
-const histreeVisualization = new HistreeVisualization(2, 4);
+const histreeVisualization = new HistreeVisualization(3, 4);
 
 histreeVisualization.drawTree(exampleData);
