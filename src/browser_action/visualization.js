@@ -33,22 +33,9 @@ class HistreeVisualization {
       .attr("height", this.height + this.margin.top + this.margin.bottom)
       .append("g")
       .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
-
-    d3.select(self.frameElement)
-      .style("height", "500px");
   }
 
   update(source) {
-    // if (!this.svg) {
-    //   this.svg = d3.select("body")
-    //     .append("svg")
-    //     .attr("width", this.width + this.margin.right + this.margin.left)
-    //     .attr("height", this.height + this.margin.top + this.margin.bottom)
-    //     .append("g")
-    //     .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
-    // }
-
-    console.log('updating with source');
     // Compute the new tree layout.
     var nodes = this.tree.nodes(this.root)
       .reverse();
