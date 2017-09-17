@@ -6,7 +6,7 @@ function log(message) {
   document.getElementById('log').append(messageLi);
 }
 
-chrome.extension.sendMessage({}, function(response) {
+chrome.extension.sendMessage({ from: 'browser_action' }, function(response) {
   // Log the response
   log(response);
 });
