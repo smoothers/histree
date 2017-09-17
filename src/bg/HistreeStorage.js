@@ -17,7 +17,9 @@ class HistreeStorage {
       // Create a new tree for the tab
       this.rootsDict[tabId] = {
         root: node,
-        currentNode: node
+        currentNode: node,
+        depth: 1,
+        width: 1
       }
     }
     // Else if the tab already has a tree
@@ -36,6 +38,11 @@ class HistreeStorage {
         // and set the current node to the new page
         this.rootsDict[tabId].currentNode = node;
       }
+
+      // Recalc width and depth of tree
+      this.rootsDict[tabId].depth = depthOf(this.rootsDict[tabId].root, 0);
+      // this.rootsDict[tabId].width = widthOf(this.rootsDict[tabId].root, 0);
+      console.log('width', this.rootsDict[tabId].width);
     }
   }
 
