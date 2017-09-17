@@ -11,16 +11,16 @@
   },
   "background": {
     "scripts": [
-      "src/bg/HistreeStorage.js",
-      "src/bg/tree_utils.js",
-      "src/bg/background.js"
+      "bg/HistreeStorage.js",
+      "bg/tree_utils.js",
+      "bg/background.js"
     ],
     "persistent": true
   },
   "browser_action": {
     "default_icon": "icons/icon19.png",
     "default_title": "histree",
-    "default_popup": "src/browser_action/browser_action.html"
+    "default_popup": "browser_action/browser_action.html"
   },
   "permissions": [
     "history",
@@ -32,7 +32,7 @@
         "<all_urls>"
       ],
       "js": [
-        "src/inject/inject.js"
+        "inject/inject.js"
       ]
     }
   ]
