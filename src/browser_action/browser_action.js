@@ -6,6 +6,26 @@ function log(message) {
   document.getElementById('log').append(messageLi);
 }
 
+var exampleTree = {
+  url: 'moo.com',
+  children: [
+    {
+      url: 'moo.com/boo',
+      children: [
+        {
+          url: 'power.rangers'
+        }
+      ]
+    },
+    {
+      url: 'moo.chim',
+      children: []
+    }
+  ]
+}
+
+
+
 chrome.extension.sendMessage({ from: 'browser_action' }, function(response) {
   // Log the response
   log(response);
