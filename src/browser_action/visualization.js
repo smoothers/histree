@@ -6,7 +6,6 @@
 
 class HistreeVisualization {
   constructor(depth, leaves) {
-    console.log('constructing with depth', depth);
     this.margin = {
       top: 20,
       right: 60,
@@ -58,7 +57,7 @@ class HistreeVisualization {
       .attr("transform", function(d) {
         return "translate(" + source.y0 + "," + source.x0 + ")";
       })
-      .on("click", data => clickNode(data));
+      .on("click", data => this.clickNode(data));
 
     nodeEnter.append("circle")
       .attr("r", 1e-6)
