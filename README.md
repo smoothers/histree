@@ -5,4 +5,4 @@ Navigate your tab's history by clicking on the extension and selecting the desir
 
 Developed by Elliot Plant and Daniel Kurek
 
-![alt text](https://github.com/smoothers/histree/screenshots/screenshot_main.png)
+![alt text](https://github.com/smoothers/histree/blob/master/screenshots/screenshot_main.png)
