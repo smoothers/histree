@@ -216,11 +216,10 @@ function click(d) {
 }
 
 function tellTabToNavigateTo(url) {
-  chrome.extension.sendMessage({
-    from: sender,
-    action: 'navigate',
-    url: url
-  }, function() {
-    console.log('lol this shouldnt happen');
+  // This is a bit of JS version es6 magic
+  //   tab => {... is shorthand for function(tab) {...
+  //   { url } is shorthand for { url: url }
+  getActiveTab(tab => {
+    chrome.tabs.update(tab.id, { url });
   });
 }
