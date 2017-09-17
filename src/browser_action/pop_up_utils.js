@@ -16,6 +16,12 @@ function log(message) {
     .append(messageLi);
 }
 
+function error(message) {
+  var errorDiv = document.createElement('div')
+  errorDiv.textContent = message;
+  document.body.append(errorDiv);
+}
+
 function getActiveTab(callback) {
   chrome.tabs.query({
     active: true,

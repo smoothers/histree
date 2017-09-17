@@ -17,3 +17,7 @@
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+
+.rect-shift {
+  transform: translate(-50%, -50%);
+}

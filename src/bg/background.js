@@ -6,6 +6,7 @@ chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
   // Handles requests from browser_action.js
   if (request.from === 'browser_action') {
     if (request.action === 'get-tree') {
+      console.log('sending', histreeStorage.getHistreeForTabId(request.data.tab.id));
       return sendResponse(histreeStorage.getHistreeForTabId(request.data.tab.id));
     }
   // Handles requests from the injected script
