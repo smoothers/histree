@@ -8,15 +8,11 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.action === 'navigate') {
       sendActiveTabToUrl(request.url);
     } else if (request.action === 'get-tree') {
-      chrome.tabs.query({
-        active: true,
-        currentWindow: true
-      }, function(tabs) {
-        sendResponse(roots_dict[tab[0].id].root);
+      getActiveTab(function(activeTab) {
+        sendResponse(roots_dict[activeTab.id]);
       });
     } else {
-      console.log('Got message from browser_action');
-      sendResponse('Some stuff');
+      sendResponse('No action in request');
     }
   } else if (request.from === 'inject') {
     sendResponse('Sounds good :)')
@@ -50,16 +46,14 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
   }
 });
 
-function sendActiveTabToUrl(url) {
-  chrome.tabs.query({
-    active: true,
-    currentWindow: true
-  }, function(tabs) {
-    var activeTab = tabs[0];
-    chrome.tabs.update(activeTab.id, {
-      url: url
-    });
+function getActiveTab(callback) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    callback(tabs[0]);
   });
+}
+
+function sendActiveTabToUrl(url) {
+  getActiveTab(function(tab) { chrome.tabs.update(tab.id, { url: url }); });
 }
 
 chrome.history.onVisited.addListener(
