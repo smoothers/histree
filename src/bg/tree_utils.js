@@ -17,6 +17,25 @@ function treeHasVisited(r, n){
 	return false;
 };
 
+function depthOf(r, d){
+	d++;
+	if (isChild(r)){
+		return d;
+	}
+	else{
+		var children_depths = r.children.map(function(x){return depthOf(x, d);});
+		return Math.max.apply( Math, children_depths);
+	}
+};
+
+// function widthOf(r){
+
+// };
+
+function isChild(r){
+	return (r.children.length === 0);
+}
+
 // Here's an alternative implementation of this method - the functionality isn't different, it
 // 	just uses some native javascript iteration power
 // function treeHasVisited(tree, node){
