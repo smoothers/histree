@@ -167,3 +167,9 @@ function update(source) {
     d.y0 = d.y;
   });
 }
+
+// Navigate to child on node click
+function click(d) {
+  tellTabToNavigateTo(d.url);
+  closePopUp();
+}
