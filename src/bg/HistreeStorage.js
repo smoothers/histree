@@ -13,27 +13,28 @@ class HistreeStorage {
     node.children = node.children || [];
 
     // If this tab does not yet have a tree
-    if (!tabId in rootsDict) {
+    if (!(tabId in this.rootsDict)) {
       // Create a new tree for the tab
-      rootsDict[tabId] = {
+      this.rootsDict[tabId] = {
         root: node,
         currentNode: node
       }
     }
     // Else if the tab already has a tree
     else {
-      var visitedNode = treeHasVisited(rootsDict[tabId].root, node);
+      console.log('this.rootsDict', this.rootsDict);
+      var visitedNode = treeHasVisited(this.rootsDict[tabId].root, node);
 
       // If the node is already in the tree
       if (visitedNode) {
         // Set the node to be the current node
-        rootsDict[tabId].currentNode = visitedNode;
+        this.rootsDict[tabId].currentNode = visitedNode;
       }
       else {
         // Else add the node as a child of the current node
-        rootsDict[tabId].currentNode.children.push(node);
+        this.rootsDict[tabId].currentNode.children.push(node);
         // and set the current node to the new page
-        rootsDict[tabId].currentNode = node;
+        this.rootsDict[tabId].currentNode = node;
       }
     }
   }
