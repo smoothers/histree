@@ -3,20 +3,8 @@ chrome.extension.sendMessage({}, function(response) {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
 
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
-		// ----------------------------------------------------------
+		chrome.runtime.sendMessage({"message": "page_loaded"});
 
 	}
 	}, 10);
 });
-
-// content.js
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-    if( request.message === "clicked_browser_action" ) {
-      console.log('boobs');
-    }
-  }
-);

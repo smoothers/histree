@@ -4,5 +4,13 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.from = 'browser_action') {
     console.log('Got message');
     sendResponse('Some stuff');
+  } else if (request.from = 'browser_action') {
+    console.log("injet.js said page loaded brah");
   }
 });
+
+chrome.history.onVisited.addListener(
+  function(result) {
+    console.log(result);
+  }
+);
