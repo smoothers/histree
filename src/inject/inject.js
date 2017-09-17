@@ -1,4 +1,4 @@
-chrome.extension.sendMessage({}, function(response) {
+chrome.extension.sendMessage({ from: 'inject' }, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === 'complete') {
 		clearInterval(readyStateCheckInterval);
