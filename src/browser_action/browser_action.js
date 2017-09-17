@@ -6,9 +6,9 @@
 
 // This is the starting point for the 'main' action
 // We first get the active tab when the the browser_action button is clicked
+// BUG: There is a bug where changing the width of the popup window in the first 200ms triggers
+// strange behavior
 setTimeout(() => {
-  console.log('load');
-  // code...
   getActiveTab(activeTab => {
     // Once we've recieved the tab, we can then ask the background task for the tab's tree
     chrome.extension.sendMessage({
@@ -19,13 +19,16 @@ setTimeout(() => {
         }
       },
       (getTreeResponse) => {
-        // HACK: There is a race condition that resets the size of the body/window
-        // setTimeout(() => {
-        const histreeVisualization = new HistreeVisualization(getTreeResponse.depth,
-          getTreeResponse.width);
+        if (!getTreeResponse) {
+          error('Unable to load tree history')
+          document.body.style.width = '200px';
+          document.body.style['text-align'] = 'center';
+        } else {
+          const histreeVisualization = new HistreeVisualization(getTreeResponse.depth,
+            getTreeResponse.width);
 
-        histreeVisualization.drawTree(getTreeResponse.root);
-        // }, 100);
+          histreeVisualization.drawTree(getTreeResponse.root);
+        }
       });
   });
-}, 1000);
+}, 200);
