@@ -4,7 +4,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.from = 'browser_action') {
     console.log('Got message');
     sendResponse('Some stuff');
-  } else if (request.from = 'inject') {
+  } else if (request.from === 'inject') {
     console.log('Inject began');
     sendResponse()
   }
