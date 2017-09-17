@@ -10,23 +10,6 @@ function log(message) {
     .append(messageLi);
 }
 
-var exampleTree = {
-  url: 'moo.com',
-  children: [
-    {
-      url: 'moo.com/boo',
-      children: [
-        {
-          url: 'power.rangers'
-        }
-      ]
-    },
-    {
-      url: 'moo.chim',
-      children: []
-    }
-  ]
-}
 const getActiveTab = (callback) => {
   chrome.tabs.query({
     active: true,
@@ -43,20 +26,20 @@ getActiveTab(activeTab => {
       tab: activeTab
     },
     function(response) {
-      log(response.root);
       root = response.root;
       root.x0 = height / 2;
       root.y0 = 0;
 
-      function collapse(d) {
-        if (d.children) {
-          d._children = d.children;
-          d._children.forEach(collapse);
-          d.children = null;
-        }
-      }
-
-      root.children.forEach(collapse);
+      // Uncomment this to add ability to collapse items
+      // function collapse(d) {
+      //   if (d.children) {
+      //     d._children = d.children;
+      //     d._children.forEach(collapse);
+      //     d.children = null;
+      //   }
+      // }
+      //
+      // root.children.forEach(collapse);
       update(root);
     });
 });
