@@ -3,8 +3,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
   // Handles reuqests from browser_action.js
   if (request.from === 'browser_action') {
     if (request.action === 'navigate') {
-      console.log('sender', sender);
-      console.log('url', request.url);
+      sendActiveTabToUrl(request.url);
     } else {
       console.log('Got message from browser_action');
       sendResponse('Some stuff');
@@ -14,6 +13,13 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     sendResponse('tsurp');
   }
 });
+
+function sendActiveTabToUrl(url) {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    var activeTab = tabs[0];
+    chrome.tabs.update(activeTab.id, { url: url });
+  });
+}
 
 chrome.history.onVisited.addListener(
   function(result) {
