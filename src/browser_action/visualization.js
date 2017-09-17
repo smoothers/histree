@@ -34,7 +34,7 @@ class HistreeVisualization {
       .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
   }
 
-  update(source) {
+  update(source, current_node) {
     // Compute the new tree layout.
     var nodes = this.tree.nodes(this.root)
       .reverse();
@@ -95,7 +95,7 @@ class HistreeVisualization {
     nodeUpdate.select("circle")
       .attr("r", 4.5)
       .style("fill", function(d) {
-        return d._children ? "lightsteelblue" : "#fff";
+        return (d.url === current_node.url) ? "chartreuse" : "#fff";
       });
 
     nodeUpdate.select("text")
@@ -165,7 +165,7 @@ class HistreeVisualization {
     });
   }
 
-  drawTree(tree) {
+  drawTree(tree, current_node) {
     // Once we've recieved the tree from the background
     // we set the root node's position
     this.root = tree;
@@ -173,7 +173,7 @@ class HistreeVisualization {
     this.root.y0 = 0;
 
     // Then we call the 'update' method to trigger the rest of the visualization
-    this.update(this.root);
+    this.update(this.root, current_node);
   }
 
   // Navigate to child on node click

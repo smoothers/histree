@@ -27,8 +27,8 @@ setTimeout(() => {
           const histreeVisualization = new HistreeVisualization(getTreeResponse.depth,
             getTreeResponse.width);
 
-          histreeVisualization.drawTree(getTreeResponse.root);
-        }
-      });
+        histreeVisualization.drawTree(getTreeResponse.root, getTreeResponse.currentNode);
+      };
+    });
   });
 }, 200);
