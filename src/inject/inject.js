@@ -1,7 +1,5 @@
-var message = {
+// Tells the background to add this page as a node in this tab's Histree
+chrome.extension.sendMessage({
 	from: 'inject',
-	referrer: document.referrer,
-}
-chrome.extension.sendMessage(message, function(response) {
-	// response('yo', response)
+	action: 'insert-node'
 });
