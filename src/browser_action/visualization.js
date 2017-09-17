@@ -49,7 +49,7 @@ function update(source) {
 
   // Normalize for fixed-depth.
   nodes.forEach(function(d) {
-    d.y = d.depth * 100;
+    d.y = d.depth * 140;
   });
 
   // Update the nodes…
@@ -81,7 +81,7 @@ function update(source) {
       return d.children || d._children ? "end" : "start";
     })
     .text(function(d) {
-      return d.title;
+      return firstNCharacters(d.title);
     })
     .style("fill-opacity", 1e-6);
 

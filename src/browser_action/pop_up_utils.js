@@ -37,3 +37,12 @@ function tellTabToNavigateTo(url) {
 function closePopUp() {
   window.close();
 }
+
+function firstNCharacters(str, n = 20) {
+  // If string is already less than n characters long, just return it
+  if (str.length <= n) {
+    return str;
+  }
+  // Else return the first n chars with a ... at the end
+  return str.substr(0, n).trim() + '...';
+}
