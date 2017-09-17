@@ -44,7 +44,8 @@ function collapse(d) {
 
 function update(source) {
   // Compute the new tree layout.
-  var nodes = tree.nodes(root).reverse();
+  var nodes = tree.nodes(root)
+    .reverse();
   var links = tree.links(nodes);
 
   // Normalize for fixed-depth.
@@ -72,18 +73,25 @@ function update(source) {
       return d._children ? "lightsteelblue" : "#fff";
     });
 
+  // Add white rectangle behind the text
+  nodeEnter.append("rect")
+    .attr("width", 120)
+    .attr("height", 15)
+    .attr("y", "-15")
+    .attr("class", "rect-shift")
+    .style("fill", "white")
+    .style("opacity", "0.7");
+
   nodeEnter.append("text")
-    .attr("x", function(d) {
-      return d.children || d._children ? -10 : 10;
-    })
     .attr("dy", "-10")
-    .attr("text-anchor", function(d) {
-      return d.children || d._children ? "end" : "start";
-    })
-    .text(function(d) {
-      return firstNCharacters(d.title);
-    })
-    .style("fill-opacity", 1e-6);
+    .attr("text-anchor", 'middle')
+    .text((d) => firstNCharacters(d.title))
+    .style("fill-opacity", 1e-6)
+    .call(function(selection) {
+      selection.each(function(d) {
+        d.bbox = this.getBBox();
+      });
+    });
 
   // Transition nodes to their new position.
   var nodeUpdate = node.transition()
