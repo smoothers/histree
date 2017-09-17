@@ -22,7 +22,7 @@ class HistreeStorage {
     }
     // Else if the tab already has a tree
     else {
-      console.log('this.rootsDict', this.rootsDict);
+      // Check to see if the node is already in the tree
       var visitedNode = treeHasVisited(this.rootsDict[tabId].root, node);
 
       // If the node is already in the tree
