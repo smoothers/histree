@@ -10,8 +10,9 @@ var margin = {
     bottom: 20,
     left: 120
   },
-  width = 960 - margin.right - margin.left,
-  height = 800 - margin.top - margin.bottom;
+  // Height and width of popup window
+  width = 10000 - margin.right - margin.left,
+  height = 503 - margin.top - margin.bottom;
 
 var i = 0,
   duration = 750,
@@ -31,7 +32,7 @@ var svg = d3.select("body")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.select(self.frameElement)
-  .style("height", "800px");
+  .style("height", "500px");
 
 function collapse(d) {
   if (d.children) {
