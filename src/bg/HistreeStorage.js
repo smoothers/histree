@@ -47,7 +47,6 @@ class HistreeStorage {
   }
 
   getHistreeForTabId(tabId) {
-    return exampleData;
-    // return this.rootsDict[tabId];
+    return this.rootsDict[tabId];
   }
 }
