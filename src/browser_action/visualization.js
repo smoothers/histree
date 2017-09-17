@@ -84,7 +84,7 @@ function update(source) {
       return d.children || d._children ? "end" : "start";
     })
     .text(function(d) {
-      return d.url;
+      return d.title;
     })
     .style("fill-opacity", 1e-6);
 
