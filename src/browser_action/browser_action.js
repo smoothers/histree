@@ -65,15 +65,7 @@ const exampleData = {
 //     });
 // });
 
-function drawTree(tree) {
-  // Once we've recieved the tree from the background
-  // we set the root node's position
-  root = tree;
-  root.x0 = height / 2;
-  root.y0 = 0;
+// Set up the canvas, given the depth and leaves of the tree
+const histreeVisualization = new HistreeVisualization(2, 4);
 
-  // Then we call the 'update' method to trigger the rest of the visualization
-  update(root);
-}
-
-drawTree(exampleData);
+histreeVisualization.drawTree(exampleData);
