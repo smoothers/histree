@@ -5,7 +5,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     console.log('Got message');
     sendResponse('Some stuff');
   } else if (request.from = 'browser_action') {
-    console.log("injet.js said page loaded brah");
+    console.log('injet.js said page loaded brah');
   }
 });
 
