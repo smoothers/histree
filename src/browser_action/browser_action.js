@@ -11,7 +11,9 @@ getActiveTab(activeTab => {
   chrome.extension.sendMessage({
       from: sender,
       action: 'get-tree',
-      tab: activeTab
+      data: {
+        tab: activeTab
+      }
     },
     function(getTreeResponse) {
       // Once we've recieved the tree from the background
