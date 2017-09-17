@@ -1,3 +1,6 @@
+// Sender id for this file so background knows who it is
+var sender = 'browser_action';
+
 // We don't know what context this runs in, but it seems like we don't have access to the console
 // Instead of using console.log in this file, use this method to append messages to the popup
 function log(message) {
@@ -24,16 +27,10 @@ var exampleTree = {
   ]
 }
 
-log('alpha');
-log(d3)
-log('beta');
-
-
-chrome.extension.sendMessage({ from: 'browser_action' }, function(response) {
+chrome.extension.sendMessage({ from: sender, action: 'get-tree' }, function(response) {
   // Log the response
-  log(response);
+  console.log('tree', response);
 });
-log('pre')
 
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
     width = 960 - margin.right - margin.left,
@@ -77,7 +74,6 @@ d3.json("flare.json", function(error, flare) {
 d3.select(self.frameElement).style("height", "800px");
 
 function update(source) {
-  log('updatron')
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse(),
@@ -104,7 +100,7 @@ function update(source) {
       .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
       .attr("dy", ".35em")
       .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
-      .text(function(d) { return d.name; })
+      .text(function(d) { return d.url; })
       .style("fill-opacity", 1e-6);
 
   // Transition nodes to their new position.
@@ -162,16 +158,14 @@ function update(source) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
-  log('mugatu')
-
 }
-log('puffin')
 
 // Toggle children on click.
 function click(d) {
-  log('clickerino')
+  if (d.url.includes('http')) {
+    tellTabToNavigateTo(d.url);
 
-  if (d.children) {
+  } else if (d.children) {
     d._children = d.children;
     d.children = null;
   } else {
@@ -181,4 +175,8 @@ function click(d) {
   update(d);
 }
 
-log('muffin')
+function tellTabToNavigateTo(url) {
+  chrome.extension.sendMessage({ from: sender, action: 'navigate', url: url }, function () {
+    console.log('lol this shouldnt happen');
+  });
+}

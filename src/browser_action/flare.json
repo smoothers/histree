@@ -1,379 +1,379 @@
 {
- "name": "flare",
+ "url": "new tab",
  "children": [
   {
-   "name": "analytics",
+   "url": "http://www.google.com",
    "children": [
     {
-     "name": "cluster",
+     "url": "http://www.ebaumsworld.com",
      "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
+      {"url": "AgglomerativeCluster", "size": 3938},
+      {"url": "CommunityStructure", "size": 3812},
+      {"url": "HierarchicalCluster", "size": 6714},
+      {"url": "MergeEdge", "size": 743}
      ]
     },
     {
-     "name": "graph",
+     "url": "graph",
      "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
-      {"name": "LinkDistance", "size": 5731},
-      {"name": "MaxFlowMinCut", "size": 7840},
-      {"name": "ShortestPaths", "size": 5914},
-      {"name": "SpanningTree", "size": 3416}
+      {"url": "BetweennessCentrality", "size": 3534},
+      {"url": "LinkDistance", "size": 5731},
+      {"url": "MaxFlowMinCut", "size": 7840},
+      {"url": "ShortestPaths", "size": 5914},
+      {"url": "SpanningTree", "size": 3416}
      ]
     },
     {
-     "name": "optimization",
+     "url": "optimization",
      "children": [
-      {"name": "AspectRatioBanker", "size": 7074}
+      {"url": "AspectRatioBanker", "size": 7074}
      ]
     }
    ]
   },
   {
-   "name": "animate",
+   "url": "animate",
    "children": [
-    {"name": "Easing", "size": 17010},
-    {"name": "FunctionSequence", "size": 5842},
+    {"url": "Easing", "size": 17010},
+    {"url": "FunctionSequence", "size": 5842},
     {
-     "name": "interpolate",
+     "url": "interpolate",
      "children": [
-      {"name": "ArrayInterpolator", "size": 1983},
-      {"name": "ColorInterpolator", "size": 2047},
-      {"name": "DateInterpolator", "size": 1375},
-      {"name": "Interpolator", "size": 8746},
-      {"name": "MatrixInterpolator", "size": 2202},
-      {"name": "NumberInterpolator", "size": 1382},
-      {"name": "ObjectInterpolator", "size": 1629},
-      {"name": "PointInterpolator", "size": 1675},
-      {"name": "RectangleInterpolator", "size": 2042}
+      {"url": "ArrayInterpolator", "size": 1983},
+      {"url": "ColorInterpolator", "size": 2047},
+      {"url": "DateInterpolator", "size": 1375},
+      {"url": "Interpolator", "size": 8746},
+      {"url": "MatrixInterpolator", "size": 2202},
+      {"url": "NumberInterpolator", "size": 1382},
+      {"url": "ObjectInterpolator", "size": 1629},
+      {"url": "PointInterpolator", "size": 1675},
+      {"url": "RectangleInterpolator", "size": 2042}
      ]
     },
-    {"name": "ISchedulable", "size": 1041},
-    {"name": "Parallel", "size": 5176},
-    {"name": "Pause", "size": 449},
-    {"name": "Scheduler", "size": 5593},
-    {"name": "Sequence", "size": 5534},
-    {"name": "Transition", "size": 9201},
-    {"name": "Transitioner", "size": 19975},
-    {"name": "TransitionEvent", "size": 1116},
-    {"name": "Tween", "size": 6006}
+    {"url": "ISchedulable", "size": 1041},
+    {"url": "Parallel", "size": 5176},
+    {"url": "Pause", "size": 449},
+    {"url": "Scheduler", "size": 5593},
+    {"url": "Sequence", "size": 5534},
+    {"url": "Transition", "size": 9201},
+    {"url": "Transitioner", "size": 19975},
+    {"url": "TransitionEvent", "size": 1116},
+    {"url": "Tween", "size": 6006}
    ]
   },
   {
-   "name": "data",
+   "url": "data",
    "children": [
     {
-     "name": "converters",
+     "url": "converters",
      "children": [
-      {"name": "Converters", "size": 721},
-      {"name": "DelimitedTextConverter", "size": 4294},
-      {"name": "GraphMLConverter", "size": 9800},
-      {"name": "IDataConverter", "size": 1314},
-      {"name": "JSONConverter", "size": 2220}
+      {"url": "Converters", "size": 721},
+      {"url": "DelimitedTextConverter", "size": 4294},
+      {"url": "GraphMLConverter", "size": 9800},
+      {"url": "IDataConverter", "size": 1314},
+      {"url": "JSONConverter", "size": 2220}
      ]
     },
-    {"name": "DataField", "size": 1759},
-    {"name": "DataSchema", "size": 2165},
-    {"name": "DataSet", "size": 586},
-    {"name": "DataSource", "size": 3331},
-    {"name": "DataTable", "size": 772},
-    {"name": "DataUtil", "size": 3322}
+    {"url": "DataField", "size": 1759},
+    {"url": "DataSchema", "size": 2165},
+    {"url": "DataSet", "size": 586},
+    {"url": "DataSource", "size": 3331},
+    {"url": "DataTable", "size": 772},
+    {"url": "DataUtil", "size": 3322}
    ]
   },
   {
-   "name": "display",
+   "url": "display",
    "children": [
-    {"name": "DirtySprite", "size": 8833},
-    {"name": "LineSprite", "size": 1732},
-    {"name": "RectSprite", "size": 3623},
-    {"name": "TextSprite", "size": 10066}
+    {"url": "DirtySprite", "size": 8833},
+    {"url": "LineSprite", "size": 1732},
+    {"url": "RectSprite", "size": 3623},
+    {"url": "TextSprite", "size": 10066}
    ]
   },
   {
-   "name": "flex",
+   "url": "flex",
    "children": [
-    {"name": "FlareVis", "size": 4116}
+    {"url": "FlareVis", "size": 4116}
    ]
   },
   {
-   "name": "physics",
+   "url": "physics",
    "children": [
-    {"name": "DragForce", "size": 1082},
-    {"name": "GravityForce", "size": 1336},
-    {"name": "IForce", "size": 319},
-    {"name": "NBodyForce", "size": 10498},
-    {"name": "Particle", "size": 2822},
-    {"name": "Simulation", "size": 9983},
-    {"name": "Spring", "size": 2213},
-    {"name": "SpringForce", "size": 1681}
+    {"url": "DragForce", "size": 1082},
+    {"url": "GravityForce", "size": 1336},
+    {"url": "IForce", "size": 319},
+    {"url": "NBodyForce", "size": 10498},
+    {"url": "Particle", "size": 2822},
+    {"url": "Simulation", "size": 9983},
+    {"url": "Spring", "size": 2213},
+    {"url": "SpringForce", "size": 1681}
    ]
   },
   {
-   "name": "query",
+   "url": "query",
    "children": [
-    {"name": "AggregateExpression", "size": 1616},
-    {"name": "And", "size": 1027},
-    {"name": "Arithmetic", "size": 3891},
-    {"name": "Average", "size": 891},
-    {"name": "BinaryExpression", "size": 2893},
-    {"name": "Comparison", "size": 5103},
-    {"name": "CompositeExpression", "size": 3677},
-    {"name": "Count", "size": 781},
-    {"name": "DateUtil", "size": 4141},
-    {"name": "Distinct", "size": 933},
-    {"name": "Expression", "size": 5130},
-    {"name": "ExpressionIterator", "size": 3617},
-    {"name": "Fn", "size": 3240},
-    {"name": "If", "size": 2732},
-    {"name": "IsA", "size": 2039},
-    {"name": "Literal", "size": 1214},
-    {"name": "Match", "size": 3748},
-    {"name": "Maximum", "size": 843},
+    {"url": "AggregateExpression", "size": 1616},
+    {"url": "And", "size": 1027},
+    {"url": "Arithmetic", "size": 3891},
+    {"url": "Average", "size": 891},
+    {"url": "BinaryExpression", "size": 2893},
+    {"url": "Comparison", "size": 5103},
+    {"url": "CompositeExpression", "size": 3677},
+    {"url": "Count", "size": 781},
+    {"url": "DateUtil", "size": 4141},
+    {"url": "Distinct", "size": 933},
+    {"url": "Expression", "size": 5130},
+    {"url": "ExpressionIterator", "size": 3617},
+    {"url": "Fn", "size": 3240},
+    {"url": "If", "size": 2732},
+    {"url": "IsA", "size": 2039},
+    {"url": "Literal", "size": 1214},
+    {"url": "Match", "size": 3748},
+    {"url": "Maximum", "size": 843},
     {
-     "name": "methods",
+     "url": "methods",
      "children": [
-      {"name": "add", "size": 593},
-      {"name": "and", "size": 330},
-      {"name": "average", "size": 287},
-      {"name": "count", "size": 277},
-      {"name": "distinct", "size": 292},
-      {"name": "div", "size": 595},
-      {"name": "eq", "size": 594},
-      {"name": "fn", "size": 460},
-      {"name": "gt", "size": 603},
-      {"name": "gte", "size": 625},
-      {"name": "iff", "size": 748},
-      {"name": "isa", "size": 461},
-      {"name": "lt", "size": 597},
-      {"name": "lte", "size": 619},
-      {"name": "max", "size": 283},
-      {"name": "min", "size": 283},
-      {"name": "mod", "size": 591},
-      {"name": "mul", "size": 603},
-      {"name": "neq", "size": 599},
-      {"name": "not", "size": 386},
-      {"name": "or", "size": 323},
-      {"name": "orderby", "size": 307},
-      {"name": "range", "size": 772},
-      {"name": "select", "size": 296},
-      {"name": "stddev", "size": 363},
-      {"name": "sub", "size": 600},
-      {"name": "sum", "size": 280},
-      {"name": "update", "size": 307},
-      {"name": "variance", "size": 335},
-      {"name": "where", "size": 299},
-      {"name": "xor", "size": 354},
-      {"name": "_", "size": 264}
+      {"url": "add", "size": 593},
+      {"url": "and", "size": 330},
+      {"url": "average", "size": 287},
+      {"url": "count", "size": 277},
+      {"url": "distinct", "size": 292},
+      {"url": "div", "size": 595},
+      {"url": "eq", "size": 594},
+      {"url": "fn", "size": 460},
+      {"url": "gt", "size": 603},
+      {"url": "gte", "size": 625},
+      {"url": "iff", "size": 748},
+      {"url": "isa", "size": 461},
+      {"url": "lt", "size": 597},
+      {"url": "lte", "size": 619},
+      {"url": "max", "size": 283},
+      {"url": "min", "size": 283},
+      {"url": "mod", "size": 591},
+      {"url": "mul", "size": 603},
+      {"url": "neq", "size": 599},
+      {"url": "not", "size": 386},
+      {"url": "or", "size": 323},
+      {"url": "orderby", "size": 307},
+      {"url": "range", "size": 772},
+      {"url": "select", "size": 296},
+      {"url": "stddev", "size": 363},
+      {"url": "sub", "size": 600},
+      {"url": "sum", "size": 280},
+      {"url": "update", "size": 307},
+      {"url": "variance", "size": 335},
+      {"url": "where", "size": 299},
+      {"url": "xor", "size": 354},
+      {"url": "_", "size": 264}
      ]
     },
-    {"name": "Minimum", "size": 843},
-    {"name": "Not", "size": 1554},
-    {"name": "Or", "size": 970},
-    {"name": "Query", "size": 13896},
-    {"name": "Range", "size": 1594},
-    {"name": "StringUtil", "size": 4130},
-    {"name": "Sum", "size": 791},
-    {"name": "Variable", "size": 1124},
-    {"name": "Variance", "size": 1876},
-    {"name": "Xor", "size": 1101}
+    {"url": "Minimum", "size": 843},
+    {"url": "Not", "size": 1554},
+    {"url": "Or", "size": 970},
+    {"url": "Query", "size": 13896},
+    {"url": "Range", "size": 1594},
+    {"url": "StringUtil", "size": 4130},
+    {"url": "Sum", "size": 791},
+    {"url": "Variable", "size": 1124},
+    {"url": "Variance", "size": 1876},
+    {"url": "Xor", "size": 1101}
    ]
   },
   {
-   "name": "scale",
+   "url": "scale",
    "children": [
-    {"name": "IScaleMap", "size": 2105},
-    {"name": "LinearScale", "size": 1316},
-    {"name": "LogScale", "size": 3151},
-    {"name": "OrdinalScale", "size": 3770},
-    {"name": "QuantileScale", "size": 2435},
-    {"name": "QuantitativeScale", "size": 4839},
-    {"name": "RootScale", "size": 1756},
-    {"name": "Scale", "size": 4268},
-    {"name": "ScaleType", "size": 1821},
-    {"name": "TimeScale", "size": 5833}
+    {"url": "IScaleMap", "size": 2105},
+    {"url": "LinearScale", "size": 1316},
+    {"url": "LogScale", "size": 3151},
+    {"url": "OrdinalScale", "size": 3770},
+    {"url": "QuantileScale", "size": 2435},
+    {"url": "QuantitativeScale", "size": 4839},
+    {"url": "RootScale", "size": 1756},
+    {"url": "Scale", "size": 4268},
+    {"url": "ScaleType", "size": 1821},
+    {"url": "TimeScale", "size": 5833}
    ]
   },
   {
-   "name": "util",
+   "url": "util",
    "children": [
-    {"name": "Arrays", "size": 8258},
-    {"name": "Colors", "size": 10001},
-    {"name": "Dates", "size": 8217},
-    {"name": "Displays", "size": 12555},
-    {"name": "Filter", "size": 2324},
-    {"name": "Geometry", "size": 10993},
+    {"url": "Arrays", "size": 8258},
+    {"url": "Colors", "size": 10001},
+    {"url": "Dates", "size": 8217},
+    {"url": "Displays", "size": 12555},
+    {"url": "Filter", "size": 2324},
+    {"url": "Geometry", "size": 10993},
     {
-     "name": "heap",
+     "url": "heap",
      "children": [
-      {"name": "FibonacciHeap", "size": 9354},
-      {"name": "HeapNode", "size": 1233}
+      {"url": "FibonacciHeap", "size": 9354},
+      {"url": "HeapNode", "size": 1233}
      ]
     },
-    {"name": "IEvaluable", "size": 335},
-    {"name": "IPredicate", "size": 383},
-    {"name": "IValueProxy", "size": 874},
+    {"url": "IEvaluable", "size": 335},
+    {"url": "IPredicate", "size": 383},
+    {"url": "IValueProxy", "size": 874},
     {
-     "name": "math",
+     "url": "math",
      "children": [
-      {"name": "DenseMatrix", "size": 3165},
-      {"name": "IMatrix", "size": 2815},
-      {"name": "SparseMatrix", "size": 3366}
+      {"url": "DenseMatrix", "size": 3165},
+      {"url": "IMatrix", "size": 2815},
+      {"url": "SparseMatrix", "size": 3366}
      ]
     },
-    {"name": "Maths", "size": 17705},
-    {"name": "Orientation", "size": 1486},
+    {"url": "Maths", "size": 17705},
+    {"url": "Orientation", "size": 1486},
     {
-     "name": "palette",
+     "url": "palette",
      "children": [
-      {"name": "ColorPalette", "size": 6367},
-      {"name": "Palette", "size": 1229},
-      {"name": "ShapePalette", "size": 2059},
-      {"name": "SizePalette", "size": 2291}
+      {"url": "ColorPalette", "size": 6367},
+      {"url": "Palette", "size": 1229},
+      {"url": "ShapePalette", "size": 2059},
+      {"url": "SizePalette", "size": 2291}
      ]
     },
-    {"name": "Property", "size": 5559},
-    {"name": "Shapes", "size": 19118},
-    {"name": "Sort", "size": 6887},
-    {"name": "Stats", "size": 6557},
-    {"name": "Strings", "size": 22026}
+    {"url": "Property", "size": 5559},
+    {"url": "Shapes", "size": 19118},
+    {"url": "Sort", "size": 6887},
+    {"url": "Stats", "size": 6557},
+    {"url": "Strings", "size": 22026}
    ]
   },
   {
-   "name": "vis",
+   "url": "vis",
    "children": [
     {
-     "name": "axis",
+     "url": "axis",
      "children": [
-      {"name": "Axes", "size": 1302},
-      {"name": "Axis", "size": 24593},
-      {"name": "AxisGridLine", "size": 652},
-      {"name": "AxisLabel", "size": 636},
-      {"name": "CartesianAxes", "size": 6703}
+      {"url": "Axes", "size": 1302},
+      {"url": "Axis", "size": 24593},
+      {"url": "AxisGridLine", "size": 652},
+      {"url": "AxisLabel", "size": 636},
+      {"url": "CartesianAxes", "size": 6703}
      ]
     },
     {
-     "name": "controls",
+     "url": "controls",
      "children": [
-      {"name": "AnchorControl", "size": 2138},
-      {"name": "ClickControl", "size": 3824},
-      {"name": "Control", "size": 1353},
-      {"name": "ControlList", "size": 4665},
-      {"name": "DragControl", "size": 2649},
-      {"name": "ExpandControl", "size": 2832},
-      {"name": "HoverControl", "size": 4896},
-      {"name": "IControl", "size": 763},
-      {"name": "PanZoomControl", "size": 5222},
-      {"name": "SelectionControl", "size": 7862},
-      {"name": "TooltipControl", "size": 8435}
+      {"url": "AnchorControl", "size": 2138},
+      {"url": "ClickControl", "size": 3824},
+      {"url": "Control", "size": 1353},
+      {"url": "ControlList", "size": 4665},
+      {"url": "DragControl", "size": 2649},
+      {"url": "ExpandControl", "size": 2832},
+      {"url": "HoverControl", "size": 4896},
+      {"url": "IControl", "size": 763},
+      {"url": "PanZoomControl", "size": 5222},
+      {"url": "SelectionControl", "size": 7862},
+      {"url": "TooltipControl", "size": 8435}
      ]
     },
     {
-     "name": "data",
+     "url": "data",
      "children": [
-      {"name": "Data", "size": 20544},
-      {"name": "DataList", "size": 19788},
-      {"name": "DataSprite", "size": 10349},
-      {"name": "EdgeSprite", "size": 3301},
-      {"name": "NodeSprite", "size": 19382},
+      {"url": "Data", "size": 20544},
+      {"url": "DataList", "size": 19788},
+      {"url": "DataSprite", "size": 10349},
+      {"url": "EdgeSprite", "size": 3301},
+      {"url": "NodeSprite", "size": 19382},
       {
-       "name": "render",
+       "url": "render",
        "children": [
-        {"name": "ArrowType", "size": 698},
-        {"name": "EdgeRenderer", "size": 5569},
-        {"name": "IRenderer", "size": 353},
-        {"name": "ShapeRenderer", "size": 2247}
+        {"url": "ArrowType", "size": 698},
+        {"url": "EdgeRenderer", "size": 5569},
+        {"url": "IRenderer", "size": 353},
+        {"url": "ShapeRenderer", "size": 2247}
        ]
       },
-      {"name": "ScaleBinding", "size": 11275},
-      {"name": "Tree", "size": 7147},
-      {"name": "TreeBuilder", "size": 9930}
+      {"url": "ScaleBinding", "size": 11275},
+      {"url": "Tree", "size": 7147},
+      {"url": "TreeBuilder", "size": 9930}
      ]
     },
     {
-     "name": "events",
+     "url": "events",
      "children": [
-      {"name": "DataEvent", "size": 2313},
-      {"name": "SelectionEvent", "size": 1880},
-      {"name": "TooltipEvent", "size": 1701},
-      {"name": "VisualizationEvent", "size": 1117}
+      {"url": "DataEvent", "size": 2313},
+      {"url": "SelectionEvent", "size": 1880},
+      {"url": "TooltipEvent", "size": 1701},
+      {"url": "VisualizationEvent", "size": 1117}
      ]
     },
     {
-     "name": "legend",
+     "url": "legend",
      "children": [
-      {"name": "Legend", "size": 20859},
-      {"name": "LegendItem", "size": 4614},
-      {"name": "LegendRange", "size": 10530}
+      {"url": "Legend", "size": 20859},
+      {"url": "LegendItem", "size": 4614},
+      {"url": "LegendRange", "size": 10530}
      ]
     },
     {
-     "name": "operator",
+     "url": "operator",
      "children": [
       {
-       "name": "distortion",
+       "url": "distortion",
        "children": [
-        {"name": "BifocalDistortion", "size": 4461},
-        {"name": "Distortion", "size": 6314},
-        {"name": "FisheyeDistortion", "size": 3444}
-       ]
-      },
-      {
-       "name": "encoder",
-       "children": [
-        {"name": "ColorEncoder", "size": 3179},
-        {"name": "Encoder", "size": 4060},
-        {"name": "PropertyEncoder", "size": 4138},
-        {"name": "ShapeEncoder", "size": 1690},
-        {"name": "SizeEncoder", "size": 1830}
+        {"url": "BifocalDistortion", "size": 4461},
+        {"url": "Distortion", "size": 6314},
+        {"url": "FisheyeDistortion", "size": 3444}
        ]
       },
       {
-       "name": "filter",
+       "url": "encoder",
        "children": [
-        {"name": "FisheyeTreeFilter", "size": 5219},
-        {"name": "GraphDistanceFilter", "size": 3165},
-        {"name": "VisibilityFilter", "size": 3509}
-       ]
-      },
-      {"name": "IOperator", "size": 1286},
-      {
-       "name": "label",
-       "children": [
-        {"name": "Labeler", "size": 9956},
-        {"name": "RadialLabeler", "size": 3899},
-        {"name": "StackedAreaLabeler", "size": 3202}
+        {"url": "ColorEncoder", "size": 3179},
+        {"url": "Encoder", "size": 4060},
+        {"url": "PropertyEncoder", "size": 4138},
+        {"url": "ShapeEncoder", "size": 1690},
+        {"url": "SizeEncoder", "size": 1830}
        ]
       },
       {
-       "name": "layout",
+       "url": "filter",
        "children": [
-        {"name": "AxisLayout", "size": 6725},
-        {"name": "BundledEdgeRouter", "size": 3727},
-        {"name": "CircleLayout", "size": 9317},
-        {"name": "CirclePackingLayout", "size": 12003},
-        {"name": "DendrogramLayout", "size": 4853},
-        {"name": "ForceDirectedLayout", "size": 8411},
-        {"name": "IcicleTreeLayout", "size": 4864},
-        {"name": "IndentedTreeLayout", "size": 3174},
-        {"name": "Layout", "size": 7881},
-        {"name": "NodeLinkTreeLayout", "size": 12870},
-        {"name": "PieLayout", "size": 2728},
-        {"name": "RadialTreeLayout", "size": 12348},
-        {"name": "RandomLayout", "size": 870},
-        {"name": "StackedAreaLayout", "size": 9121},
-        {"name": "TreeMapLayout", "size": 9191}
+        {"url": "FisheyeTreeFilter", "size": 5219},
+        {"url": "GraphDistanceFilter", "size": 3165},
+        {"url": "VisibilityFilter", "size": 3509}
        ]
       },
-      {"name": "Operator", "size": 2490},
-      {"name": "OperatorList", "size": 5248},
-      {"name": "OperatorSequence", "size": 4190},
-      {"name": "OperatorSwitch", "size": 2581},
-      {"name": "SortOperator", "size": 2023}
+      {"url": "IOperator", "size": 1286},
+      {
+       "url": "label",
+       "children": [
+        {"url": "Labeler", "size": 9956},
+        {"url": "RadialLabeler", "size": 3899},
+        {"url": "StackedAreaLabeler", "size": 3202}
+       ]
+      },
+      {
+       "url": "layout",
+       "children": [
+        {"url": "AxisLayout", "size": 6725},
+        {"url": "BundledEdgeRouter", "size": 3727},
+        {"url": "CircleLayout", "size": 9317},
+        {"url": "CirclePackingLayout", "size": 12003},
+        {"url": "DendrogramLayout", "size": 4853},
+        {"url": "ForceDirectedLayout", "size": 8411},
+        {"url": "IcicleTreeLayout", "size": 4864},
+        {"url": "IndentedTreeLayout", "size": 3174},
+        {"url": "Layout", "size": 7881},
+        {"url": "NodeLinkTreeLayout", "size": 12870},
+        {"url": "PieLayout", "size": 2728},
+        {"url": "RadialTreeLayout", "size": 12348},
+        {"url": "RandomLayout", "size": 870},
+        {"url": "StackedAreaLayout", "size": 9121},
+        {"url": "TreeMapLayout", "size": 9191}
+       ]
+      },
+      {"url": "Operator", "size": 2490},
+      {"url": "OperatorList", "size": 5248},
+      {"url": "OperatorSequence", "size": 4190},
+      {"url": "OperatorSwitch", "size": 2581},
+      {"url": "SortOperator", "size": 2023}
      ]
     },
-    {"name": "Visualization", "size": 16540}
+    {"url": "Visualization", "size": 16540}
    ]
   }
  ]
