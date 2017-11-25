@@ -2,7 +2,7 @@
 const histreeStorage = new HistreeStorage();
 
 // This handles messages sent from inject.js or browser_action.js
-chrome.extension.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   // Handles requests from browser_action.js
   if (request.from === 'browser_action') {
     if (request.action === 'get-tree') {

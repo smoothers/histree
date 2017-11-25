@@ -11,7 +11,7 @@
 setTimeout(() => {
   getActiveTab(activeTab => {
     // Once we've recieved the tab, we can then ask the background task for the tab's tree
-    chrome.extension.sendMessage({
+    chrome.runtime.sendMessage({
         from: sender,
         action: 'get-tree',
         data: {
