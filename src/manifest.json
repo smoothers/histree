@@ -25,15 +25,5 @@
   "permissions": [
     "history",
     "tabs"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "inject/inject.js"
-      ]
-    }
   ]
 }
