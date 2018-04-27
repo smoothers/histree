@@ -1,6 +1,6 @@
 // Scripts order
 // * pop_up_utils
-// d3.min (d3 visualization library)
+// d3.js (d3 visualization library)
 // visualization
 // browser_action.js
 
